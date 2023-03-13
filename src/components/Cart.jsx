@@ -26,7 +26,8 @@ const Cart = () => {
   const handleCheckout = async () => {
     const stripe = await getStripe();
 
-    const response = await fetch("api/stripe", {
+    const response = await fetch("/api/stripe", {
+      method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
@@ -124,7 +125,12 @@ const Cart = () => {
               <h3>${totalPrice}</h3>
             </div>
             <div className="btn-container">
-              <button type="button" className="btn" onClick={handleCheckout}>
+              <button
+                type="button"
+                role="link"
+                className="btn"
+                onClick={handleCheckout}
+              >
                 Pay with Stripe
               </button>
             </div>
