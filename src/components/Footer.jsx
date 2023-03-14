@@ -1,13 +1,20 @@
 import React from "react";
-import { AiFillInstagram, AiOutlineTwitter } from "react-icons/ai";
+import Link from "next/link";
+import { AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
 
 const Footer = () => {
   return (
     <div className="footer-container">
-      <p>2023 Jam Store All Rights reserved</p>
+      <p>
+        2023 Jam Store - This is a fake website to train web development skills
+      </p>
       <p className="icons">
-        <AiFillInstagram />
-        <AiOutlineTwitter />
+        <Link href="https://www.instagram.com/chaerulumamn/">
+          <AiFillInstagram />
+        </Link>
+        <Link href="https://www.linkedin.com/in/chaerulumamli/">
+          <AiFillLinkedin />
+        </Link>
       </p>
     </div>
   );
